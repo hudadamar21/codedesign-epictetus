@@ -4,6 +4,9 @@
 
 
 @layer base {
+  * {
+    @apply tracking-wide
+  }
   body {
     @apply font-patrick-hand
   }
