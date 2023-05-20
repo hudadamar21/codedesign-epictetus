@@ -1,22 +1,54 @@
 <header
-  class="sticky top-[-6.2rem] md:top-[-5.5rem] w-full items-start justify-center z-40 select-none pt-5">
+  x-data="{openMenu: false, openSearch: false}"
+  class="relative w-full items-start justify-center z-40 select-none pt-5">
   <div class="max-w-screen-xl mx-auto col-span-2 order-last md:order-none mt-3 md:mt-0">
-    <div class="flex items-center justify-between w-full gap-3 pt-10 h-20 mb-5 gap-x-5 md:gap-x-12 px-5">
-      <nav class="flex items-center justify-center gap-x-10">
-        <a href="/" class="flex items-center gap-x-3 mr-10">
+    <div
+      class="flex items-center justify-between w-full gap-3 pt-0 md:pt-10 h-12 md:h-20 mb-5 gap-x-5 md:gap-x-12 px-5">
+      <nav class="flex items-center w-full justify-between md:justify-center md:gap-x-20">
+        <button @click="openMenu = !openMenu" class="relative z-10 md:hidden">
+          <img src="/menu.svg" alt="menu" />
+        </button>
+        <a href="/" class="relative z-10 flex items-center gap-x-3">
           <img src="/logo.svg" alt="epictetus logo" />
           Epictetus
         </a>
-        {{ range .Site.Params.Categories }}
-        <a
-          href='/{{ if eq . "tags" }}{{ . }}{{ else }}category/{{.slug}}{{ end }}'
-          class="swiper-slide flex items-center gap-3 !w-auto hover:bg-white/5 dark:hover:bg-primary-dark-gray py-3 px-2 md:px-5 rounded-lg transition duration-300">
-          {{ .name }}
-        </a>
-        {{ end }}
+        <button @click="openSearch = !openSearch" class="relative z-10 md:hidden">
+          <svg class="w-5 h-5" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.1" clip-path="url(#clip0_5_30)">
+              <path
+                d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12.25 12.25L9.71251 9.71246"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_5_30">
+                <rect width="14" height="14" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+        <div
+          class="absolute md:static top-0 left-0 flex flex-col md:flex-row items-center justify-center gap-x-10 pt-36 pb-10 md:p-0 bg-primary md:bg-transparent w-full transition duration-500 md:translate-y-0"
+          :class="openMenu ? 'translate-y-0' : '-translate-y-full'">
+          {{ range .Site.Params.Categories }}
+          <a
+            href='/{{ if eq . "tags" }}{{ . }}{{ else }}category/{{.slug}}{{ end }}'
+            class="swiper-slide flex items-center gap-3 !w-auto hover:bg-white/5 dark:hover:bg-primary-dark-gray py-3 px-2 md:px-5 rounded-lg transition duration-300">
+            {{ .name }}
+          </a>
+          {{ end }}
+        </div>
       </nav>
 
-      {{ partial "search-form.html" . }}
+      {{- partial "search-form.html" . -}}
     </div>
   </div>
 </header>
