@@ -1,42 +1,42 @@
 {{ define "main" }}
 
-<div class="grid grid-cols-1 md:grid-cols-4 h-max">
-  <main class="col-span-3 md:pr-8 space-y-0 md:space-y-4 mb-12 lg:mb-0">
-    <article class="p-4 md:p-6">
-      <img src="{{ .Params.Thumbnail }}" class="rounded w-full" alt="article cover" />
-
-      <div class="pt-3 space-y-5 mt-3 mb-6 pb-7 border-b border-primary-gray">
-        <h1 class="text-3xl font-bold leading-none capitalize">{{ .Title }}</h1>
-        <div class="flex items-center gap-x-5">
-          {{ range .Params.Tags }}
-            <div class="flex items-center gap-2 text-sm dark:text-white font-bold text-primary-tosca">
-              <img
-                class="w-[1.1rem] h-[1.1rem]"
-                src="/images/icons/tag.svg"
-                alt="" />
-              {{ . }}
-            </div>
-          {{ end }}
+<main class="md:pr-8 space-y-0 md:space-y-4 mb-12 lg:mb-0">
+  <article class="p-4 md:p-6">
+    <div class="flex flex-col items-center py-5">
+      <div class="text-sm opacity-60 flex items-center gap-x-3">
+        <span class="uppercase">{{ .Params.Category }}</span>
+        <div class="h-1 w-1 rounded-full bg-white"></div>
+        {{ .Params.date.Format .Site.Params.dateFormat }}
+      </div>
+      <h1 class="font-medium leading-loose capitalize text-2xl mt-3 w-2/3 text-center">
+        {{ .Title }}
+      </h1>
+      <div class="flex items-center gap-3 mt-5">
+        <img
+          src="{{ .Params.Author_photo }}"
+          class="w-14 h-14 aspect-square rounded-full object-cover"
+          alt="{{ .Params.Author }}" />
+        <div>
+          <h3>{{ .Params.Author }}</h3>
+          <p class="opacity-60">{{ .Params.Author_job }}</p>
         </div>
       </div>
+    </div>
 
-      {{partial "toc.html" .}}
+    <img src="{{ .Params.Thumbnail }}" class="mt-5 rounded w-full aspect-video object-cover" alt="article cover" />
 
-      <br />
+    {{partial "toc.html" .}}
 
-      <div class="prose dark:prose-invert prose-a:text-primary-blue prose-img:w-full !max-w-full border-b border-primary-gray pb-10">
-        {{.Content}}
-      </div>
-    </article>
-  </main>
-</div>
+    <br />
 
-{{end}}
+    <div
+      class="prose prose-a:text-blue-300 prose-img:w-full leading-relaxed !max-w-screen-lg mx-auto p-5 md:p-10 [&>*]:text-white/90">
+      {{.Content}}
+    </div>
+  </article>
+</main>
 
-
-{{ define "scripts"}}
-  {{ if (findRE "<pre" .Content 1) }}
-    <!-- Jika content memiliki pre atau bisa dibilang mempunyai block code maka masukan script -->
-    <script src="/js/copy-code-button.js"></script>
-  {{ end }}
-{{ end }}
+{{end}} {{ define "scripts"}} {{ if (findRE "<pre" .Content 1) }}
+<!-- Jika content memiliki pre atau bisa dibilang mempunyai block code maka masukan script -->
+<script src="/js/copy-code-button.js"></script>
+{{ end }} {{ end }}
