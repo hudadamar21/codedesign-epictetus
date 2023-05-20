@@ -4,7 +4,7 @@ module.exports = {
   content: [
     "./layouts/**/*.html", 
     "./static/**/*.js", 
-    "./themes/**/*.{html,js}"
+    "./themes/epictetus/**/*.{html,js}"
   ],
   darkMode: "class",
   theme: {
@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: "#374151",
         secondary: "#111827",
+        dark: '#1F2937'
       },
       container: {
         center: true,
