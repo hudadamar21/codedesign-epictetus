@@ -10,7 +10,7 @@ pygmentsCodefences: true
 pygmentsUseClasses: true
 permalinks:
   '/': '/:section/:filename/'
-
+theme: epictetus
 taxonomies:
   category: "category"
   tag: "tags"
