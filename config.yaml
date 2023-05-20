@@ -3,7 +3,7 @@ languageCode: "id-ID"
 defaultContentLanguage: "id"
 title: "Epictetus"
 summaryLength: 10
-paginate: 5
+paginate: 7
 disqusShortname: "epictetus"
 enableGitInfo: true
 pygmentsCodefences: true 
@@ -42,6 +42,7 @@ params:
   keywords: "blog"
   locale: "en-US"
   type: "website"
+  dateFormat: "02 Jan 2006"
   categories: 
     - name: 'UI Design'
       slug: 'ui-design'
