@@ -3,7 +3,7 @@
   id="search"
   action='{{ with .GetPage "/search" }}{{.Permalink}}{{end}}'
   method="get"
-  class="absolute top-0 inset-x-0 md:static w-[90%] mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark/60 text-white transition duration-500"
+  class="absolute top-0 inset-x-0 md:static w-[90%] md:w-80 mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark/60 text-white transition duration-500 md:translate-y-0"
   :class="openSearch ? 'translate-y-24' : '-translate-y-[150%]'"
   >
   <svg class="w-4 h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
