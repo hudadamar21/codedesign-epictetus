@@ -1,0 +1,9 @@
+<figure class="post-card">
+  <a href="{{.Permalink}}" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
+    {{ if .Params.Thumbnail }}
+    <img src="{{ .Params.Thumbnail }}"  class="w-full h-full object-cover rounded-lg" alt="{{ .Title }}">
+    {{ end }}
+  </a>
+  {{- partial "components/card-article-body.html" . -}}
+</figure>
+
