@@ -1,0 +1,20 @@
+<div class="col-span-4 py-5">
+  <div class="text-sm opacity-60 flex items-center gap-x-3">
+    <span class="uppercase">{{ .Params.Category }}</span> <div class="h-1 w-1 rounded-full bg-white"></div> {{ .Params.date.Format .Site.Params.dateFormat }}
+  </div>
+  <a href="{{.Permalink}}" class="block hover:underline py-3">
+    <figcaption class="font-medium leading-loose line-clamp-2 capitalize text-2xl">
+      {{ .Title }}
+    </figcaption>
+  </a>
+  <p class="opacity-60 leading-loose tracking-wider w-full md:w-[85%] line-clamp-3">
+    {{ .Params.Description }}
+  </p>
+  <div class="flex items-center gap-3 mt-5">
+    <img src="{{ .Params.Author_photo }}" class="w-14 h-14 aspect-square rounded-full object-cover" alt="{{ .Params.Author }}">
+    <div>
+      <h3>{{ .Params.Author }}</h3>
+      <p class="opacity-60">{{ .Params.Author_job }}</p>
+    </div>
+  </div>
+</div>
