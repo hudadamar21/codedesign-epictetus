@@ -1,0 +1,55 @@
+baseURL: "https://epictetus-hd21.netlify.app/"
+languageCode: "id-ID"
+defaultContentLanguage: "id"
+title: "Epictetus"
+summaryLength: 10
+paginate: 5
+disqusShortname: "epictetus"
+enableGitInfo: true
+pygmentsCodefences: true 
+pygmentsUseClasses: true
+permalinks:
+  '/': '/:section/:filename/'
+
+taxonomies:
+  category: "category"
+  tag: "tags"
+  
+markup:
+  tableOfContents:
+    endLevel: 6
+    startLevel: 1
+
+related:
+  includeNewer: false
+  threshold: 80
+  toLower: false
+  indices: 
+    - name: 'keywords'
+      weight: 100
+    - name: 'date'
+      weight: 10
+  
+  
+
+# json
+outputs:
+  home: ["html", "json"]
+
+params:
+  site_name: "Epictetus"
+  description: "Epictetus description"
+  keywords: "blog"
+  locale: "en-US"
+  type: "website"
+  categories: 
+    - name: 'UI Design'
+      slug: 'ui-design'
+    - name: 'Front-end'
+      slug: 'front-end'
+    - name: 'Back-end'
+      slug: 'back-end'
+
+
+
+
