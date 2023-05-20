@@ -2,6 +2,27 @@
 {{ $paginate := .Paginate (where .Site.RegularPages "Kind" "page" )}}
 <main class="space-y-0 md:space-y-4 mb-12 lg:mb-0">
 
+  <section class="post-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-5">
+    {{ range $index, $value :=  $paginate.Pages }}
+    {{ if (eq $index 0) }}
+      {{- partial "components/big-card-article.html" . -}}
+      {{ else }}
+      {{- partial "components/card-article.html" . -}}
+    {{ end }}
+  {{end}}
+  </section>
+
+  <div class="pt-16 flex justify-center w-full">
+    {{- if .Paginator.HasNext -}}
+    <div class="text-center pt-6 pb-16">
+      <a href="{{ .Paginator.Next.URL }}"
+        class="post-load-more block px-16 py-3 rounded-md text-white font-semibold text-lg bg-primary-tosca hover:opacity-90 transition">
+        Load More
+      </a>
+    </div>
+    {{- end -}}
+
+  </div>
 </main>
 {{end}}
 
