@@ -9,5 +9,8 @@ keyword: ""
 draft: false
 toc: false
 trending: false
+author: 
+author_photo: 
+author_job:
 ---
 
