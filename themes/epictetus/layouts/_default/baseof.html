@@ -9,12 +9,10 @@
   <section class="max-w-screen-xl mx-auto px-0 md:px-0 py-6">
     {{- block "main" . }}{{- end }}
   </section>
-  {{- partial "footer.html" . -}}
-  
 
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  {{- partial "footer.html" . -}}
   {{ partial "search-index.html" . }}
-  <script src="/js/main.js"></script>
+  
   {{- block "scripts" . }}{{- end }}
 </body>
 </html>
