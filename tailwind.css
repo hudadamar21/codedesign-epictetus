@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply font-patrick-hand
+  }
+}
+
+.highlight {
+  position: relative;
+  margin: 0 0 25px;
+  overflow: hidden;
+  /* padding: 15px; */
+  /* background-color: #272822; */
+  border-radius: 7px;
+}
+
+.highlight:hover .copy-code-button {
+  @apply opacity-100 bg-primary/30 hover:bg-primary;
+}
+
+.copy-code-button {
+  @apply absolute right-2 top-9 text-primary opacity-30 transition duration-200 text-base rounded-md -mt-1 px-2 py-1 hover:cursor-pointer hover:text-white;
+}
+
+.highlight .chroma {
+  overflow-x: auto;
+}
+
+.highlight .chroma .hl {
+  @apply border-l-4 border-primary w-full bg-black block;
+}
