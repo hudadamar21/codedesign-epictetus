@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $paginate := .Paginate (where .Site.RegularPages "Kind" "page" )}}
+<main class="space-y-0 md:space-y-4 mb-12 lg:mb-0">
+
+</main>
+{{end}}
+
+{{ define "scripts" }}
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script>
+
+  const postContainer = document.querySelector('.post-container');
+
+  const options = {
+    path: '.post-load-more',
+    append: '.post-card',
+    loadOnScroll: false,
+    button: '.post-load-more',
+    history: null
+  };
+
+  const infScroll = new InfiniteScroll(postContainer, options);
+</script>
+{{ end }}

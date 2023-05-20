@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<section class="post-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-5">
+  {{ range .Paginator.Pages }}
+  {{- partial "components/card-article.html" . -}}
+  {{end}}
+</section>
+
+<div class="text-center pt-6 pb-16">
+  <button class="px-6 py-3 rounded-md border dark:border-white/10 text-primary-blue hover:bg-gray-100 transition">
+    Load More
+  </button>
+</div>
+
+{{end}}

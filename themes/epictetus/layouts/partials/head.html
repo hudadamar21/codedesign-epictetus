@@ -1,0 +1,62 @@
+<head>
+  <title>{{.Title}}</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="_2tFiWMi2coD9-msB3YML4WoCaoJDDgr1AQfm-k90dE" />
+
+  <link rel="icon" type="image/x-icon" href="/logo.svg" />
+  <link rel="canonical" href="{{ .Permalink | absURL }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="{{ or .Type `website` }}" />
+  <meta property="og:title" content="{{ .Title }}" />
+  {{if .Description}}
+  <meta name="og:description" content="{{ .Description }}" />
+  {{ else if eq .Kind "section" }}
+  <meta name="og:description" content="{{ .Summary }}" />
+  {{ else }}
+  <meta name="og:description" content="{{ .Site.Params.Description }}" />
+  {{ end }} {{ if .IsPage }} {{ if .Params.Keywords }} <meta name="keywords" content={{ delimit
+  .Params.Keywords " " }}> {{ end }} {{ else }}
+  <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
+  {{ end }}
+  <meta property="og:url" content="{{ .Permalink | absURL }}" />
+  <meta property="og:site_name" content="{{ .Site.Params.Site_name }}" />
+  <meta name="twitter:card" content="summary" />
+  {{ if .IsPage }}
+  <meta property="article:author" content="" />
+  <meta
+    property="article:published_time"
+    content="{{ .PublishDate.Format `20060102-15:04:05.000` }}" />
+  <meta
+    property="article:modified_time"
+    content="{{ .Page.Lastmod.Format `20060102-15:04:05.000` }}" />
+  <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
+  {{ else }}
+  <meta property="og:image" content="/images/og_thumbnail.png" />
+  {{ end }}
+  <meta property="og:image:width" content="945" />
+  <meta property="og:image:height" content="595" />
+
+  <!-- hightlight -->
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  {{if .IsPage}}
+  <link rel="stylesheet" href="/css/syntax.css" />
+  {{end}}
+
+  
+</head>
