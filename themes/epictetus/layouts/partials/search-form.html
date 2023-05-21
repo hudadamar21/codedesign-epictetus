@@ -11,6 +11,7 @@
   x-transition:leave="transition ease-in duration-300"
   x-transition:leave-start="translate-y-0"
   x-transition:leave-end="-translate-y-[150%]"
+  @click.outside="openSearch = false"
   class="absolute top-24 inset-x-0 lg:static w-[90%] lg:w-80 mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark lg:bg-dark/60 text-white lg:translate-y-0 lg:!flex">
   <svg class="w-4 h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.1" clip-path="url(#clip0_5_30)">
@@ -36,7 +37,7 @@
   <input
     id="search-input"
     name="query"
-    class="search-content bg-transparent focus:outline-none tracking-wider"
+    class="search-content bg-transparent focus:outline-none tracking-wider w-full"
     type="text"
     placeholder="Search" />
 </form>
