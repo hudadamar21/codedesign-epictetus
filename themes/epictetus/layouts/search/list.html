@@ -1,10 +1,26 @@
 {{ define "main" }}
 <main class="max-w-screen-xl px-5 mx-auto space-y-52">
-  <section clas="mt-10 ">
+  <section clas="mt-10">
+    <div class="text-center py-16">
+      <h2 class="text-4xl">Search: <span class="search-query"></span></h2>
+    </div>
 
-    <div id="results" class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 dark:text-white">
-      <p>Enter a keyword above to search this site.</p>
+    <div class="no-result">
+
+    </div>
+    <div
+      id="results"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 dark:text-white">
     </div>
   </section>
 </main>
+{{ end }} {{ define "scripts"}}
+<script>
+  const searchQuery = document.querySelectorAll(".search-query");
+
+  let queryParams = new URLSearchParams(window.location.search);
+  searchQuery.forEach((sq) => {
+    sq.textContent = queryParams.get("query");
+  });
+</script>
 {{ end }}

@@ -54,6 +54,7 @@ function searchContent(query) {
 
 function displayResults (results, store) {
   const searchResults = document.querySelector('#results')
+  const noResult = document.querySelector('.no-result')
   if (results.length) {
     let resultList = ''
     // Iterate and build result list elements
@@ -64,32 +65,41 @@ function displayResults (results, store) {
           <a href="${item.url}" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
             <img src="${item.thumbnail}"  class="w-full h-full object-cover rounded-lg" alt="{{ .Title }}">
           </a>
-          <div class="md:col-span-4 py-5">
+          <div class="md:col-span-4 pt-6 space-y-3">
             <div class="text-sm opacity-60 flex items-center gap-x-3">
               <span class="uppercase">${item.category}</span> <div class="h-1 w-1 rounded-full bg-white"></div> ${item.date}
             </div>
-            <a href="${item.url}" class="block hover:underline py-3">
-              <figcaption class="font-medium leading-loose line-clamp-2 capitalize text-2xl">
+            <a href="${item.url}" class="block hover:underline">
+              <figcaption class="font-medium leading-relaxed line-clamp-2 capitalize text-2xl">
                 ${item.title}
               </figcaption>
             </a>
-            <p class="opacity-60 leading-loose tracking-wider w-full md:w-[85%] line-clamp-3">
-            ${item.description}
+            <p class="opacity-60 leading-relaxed tracking-wider line-clamp-3">
+              ${item.description}
             </p>
-            <div class="flex items-center gap-3 mt-5">
-              <img src="${item.author_photo}" class="w-14 h-14 aspect-square rounded-full object-cover" alt="{{ .Params.Author }}">
+            <div class="flex items-center gap-3 pt-3">
+              <img src="${item.author_photo}" class="w-[50px] h-[50px] aspect-square rounded-full object-cover" alt="${item.author}">
               <div>
                 <h3>${item.author}</h3>
-                <p class="opacity-60">${item.author_job}</p>
+                <p class="opacity-60 text-sm">${item.author_job}</p>
               </div>
             </div>
           </div>
         </figure>
+        
       `
     }
     searchResults.innerHTML = resultList
   } else {
-    searchResults.innerHTML = 'No results found.'
+    noResult.innerHTML = `
+    <div class="text-center py-10">
+      <h3 class="text-[64px]">No result 😥</h3>
+      <p class="text-xl w-full lg:w-[55%] mx-auto">
+        We couldn’t find any posts with the keyword \`<span class="search-query"></span>\`. Please try
+        another keyword.
+      </p>
+    </div>
+    `
   }
 }
 
