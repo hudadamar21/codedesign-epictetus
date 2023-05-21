@@ -1,5 +1,5 @@
 ---
-date: 2022-06-20T10:57:42+07:00
+date: 2022-01-20T10:57:42+07:00
 
 title: "How to design a product that can grow itself 10x in year"
 thumbnail: "/images/img3.jpeg"

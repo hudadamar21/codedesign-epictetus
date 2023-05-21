@@ -1,5 +1,5 @@
 ---
-date: 2022-09-20T10:57:42+07:00
+date: 2021-10-20T10:57:42+07:00
 
 title: "The More Important the Work, the More Important the Rest"
 thumbnail: "/images/img2.jpeg"

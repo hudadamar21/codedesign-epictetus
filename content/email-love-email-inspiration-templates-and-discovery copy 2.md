@@ -1,5 +1,5 @@
 ---
-date: 2021-02-20T10:57:42+07:00
+date: 2022-02-20T10:57:42+07:00
 
 title: "Email Love - Email Inspiration, Templates and Discovery"
 thumbnail: "/images/img4.jpeg"

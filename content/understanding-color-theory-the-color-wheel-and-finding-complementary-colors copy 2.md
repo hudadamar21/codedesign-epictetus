@@ -1,5 +1,5 @@
 ---
-date: 2022-11-20T10:57:42+07:00
+date: 2022-01-20T10:57:42+07:00
 
 title: "Understanding color theory: the color wheel and finding complementary colors"
 thumbnail: "/images/img1.jpeg"
