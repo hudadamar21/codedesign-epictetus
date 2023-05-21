@@ -8,7 +8,7 @@
         <div class="h-1 w-1 rounded-full bg-white"></div>
         {{ .Params.date.Format .Site.Params.dateFormat }}
       </div>
-      <h1 class="font-medium leading-loose capitalize text-2xl mt-3 w-2/3 text-center">
+      <h1 class="font-medium leading-loose capitalize text-2xl mt-3 w-full md:w-2/3 text-center">
         {{ .Title }}
       </h1>
       <div class="flex items-center gap-3 mt-5">
@@ -23,20 +23,36 @@
       </div>
     </div>
 
-    <img src="{{ .Params.Thumbnail }}" class="mt-5 rounded w-full aspect-video object-cover" alt="article cover" />
+    <img
+      src="{{ .Params.Thumbnail }}"
+      class="mt-5 rounded w-full aspect-video object-cover"
+      alt="article cover" />
 
     {{partial "toc.html" .}}
 
     <br />
 
     <div
-      class="prose prose-a:text-blue-300 prose-img:w-full leading-relaxed !max-w-screen-lg mx-auto p-5 md:p-10 [&>*]:text-white/90">
+      class="
+        prose !max-w-screen-lg mx-auto
+        prose-a:text-blue-300 
+        prose-img:w-full 
+        prose-headings:mb-8 
+        prose-p:text-base 
+        lg:prose-p:text-lg 
+        prose-headings:!text-white/90 
+        prose-headings:tracking-wider
+        p-0 md:p-10 
+        leading-loose 
+        [&>*]:text-white/80 
+        [&>*]:tracking-wider 
+      ">
       {{.Content}}
     </div>
   </article>
 </main>
 
-{{end}} {{ define "scripts"}} {{ if (findRE "<pre" .Content 1) }}
 <!-- Jika content memiliki pre atau bisa dibilang mempunyai block code maka masukan script -->
+{{end}} {{ define "scripts"}} {{ if (findRE "<pre" .Content 1) }}
 <script src="/js/copy-code-button.js"></script>
 {{ end }} {{ end }}
