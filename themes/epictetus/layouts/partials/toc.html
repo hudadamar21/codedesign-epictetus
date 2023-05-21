@@ -1,12 +1,7 @@
 {{ if and .Params.toc }}
-<nav class="relative mt-8 z-30 mb-10 border rounded-lg dark:bg-fs-gray dark:text-white max-w-sm">
-  <div class="flex items-center gap-3 border-b py-2 px-4">
-    <img src="/images/icons/toc.svg" alt="toc">
-    <h1 class="text-xl font-semibold">
-      Table of Contents
-    </h1>
-  </div>
-  <div class="py-2 px-4 text-primary-blue hover:[&_a]:underline [&_a]:block [&_a]:py-0.5">
+<nav class="!max-w-screen-lg mx-auto mt-8 z-30 text-white px-5 lg:px-10">
+  <h2 class="font-bold tracking-widest">Table of Contents:</h2>
+  <div class="ml-2 py-2 px-4 text-primary-blue hover:[&_a]:underline [&_a]:block [&_a]:py-0.5 [&_ul]:list-disc">
     {{ .TableOfContents }}
   </div>
 </nav>
