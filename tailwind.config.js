@@ -14,15 +14,8 @@ module.exports = {
         secondary: "#111827",
         dark: '#1F2937'
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "0rem",
-          sm: "2rem",
-          md: "6rem",
-          lg: "10rem",
-          xl: "12rem",
-        },
+      screens: {
+        xl: '1080px'
       },
       fontFamily: {
         "patrick-hand": "'Patrick Hand', cursive",
