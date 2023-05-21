@@ -4,6 +4,7 @@
   action='{{ with .GetPage "/search" }}{{.Permalink}}{{end}}'
   method="get"
   x-show="openSearch"
+  x-cloak
   x-transition:enter="transition ease-out duration-300"
   x-transition:enter-start="-translate-y-[150%]"
   x-transition:enter-end="translate-y-0"
