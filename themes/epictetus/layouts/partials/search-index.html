@@ -1,0 +1,23 @@
+<script>
+  window.store = {
+      // You can specify your blog section only:
+      {{ range .Site.RegularPages }}
+      // For all pages in your site, use "range .Site.Pages"
+      // You can use any unique identifier here
+      "{{ .Permalink }}": {
+          // You can customize your searchable fields using any .Page parameters
+          "title": "{{ .Title  }}",
+          "thumbnail": "{{ .Params.Thumbnail  }}",
+          "category": "{{ .Params.Category }}",
+          "url": "{{ .Permalink }}",
+          "date": "{{ .Params.date.Format .Site.Params.dateFormat }}",
+          "description": "{{ .Params.Description }}",
+          "author": "{{ .Params.Author }}",
+          "author_photo": "{{ .Params.Author_photo }}",
+          "author_job": "{{ .Params.Author_job }}",
+      },
+      {{ end }}
+  }
+</script>
+<script src="/js/lunr.js"></script>
+<script src="/js/search.js"></script>

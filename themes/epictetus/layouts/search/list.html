@@ -1,24 +1,10 @@
 {{ define "main" }}
+<main class="pt-32 pb-52 max-w-screen-xl px-5 mx-auto space-y-52">
+  <section clas="mt-10 ">
 
-<section class="text-center py-10">
-  <h1 class="font-bold text-3xl mb-5 text-soft-dark dark:text-soft-gray">
-    Search: <span class="query text-primary-tosca"></span>
-  </h1>
-</section>
-
-<ul id="results" class="post-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-5">
-	<li>
-		Enter a keyword above to search this site.
-	</li>
-</ul>
-{{ end }}
-
-
-{{ define "scripts" }}
-<script>
-	const searchQueryEl = document.querySelector('.query');
-	const url = new URL(window.location.href);
-	const searchQuery = url.searchParams.get("query");
-	searchQueryEl.textContent = searchQuery
-</script>
+    <div id="results" class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 dark:text-white">
+      <p>Enter a keyword above to search this site.</p>
+    </div>
+  </section>
+</main>
 {{ end }}
