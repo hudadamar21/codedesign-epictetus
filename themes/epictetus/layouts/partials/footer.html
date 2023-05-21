@@ -1,6 +1,9 @@
-<footer class="mt-12 pb-28 text-primary-gray px-5 xl:px-0">
-  <div class="max-w-screen-xl mx-auto text-center pt-10">
-    <p class="text-xs md:text-sm">Copyright (c) 2021 - Epictetus</p>
-    <p class="text-xs md:text-sm">Design By Nauval</p>
+<footer x-data="{datenow: new Date()}" class="mt-12 pb-28 text-primary-gray px-5 xl:px-0">
+  <div class="max-w-screen-xl mx-auto text-center pt-10 space-y-2">
+    <p class="text-xs md:text-sm">
+      Copyright (c) 2021 - <span x-text="datenow.getFullYear()"></span> - Epictetus
+    </p>
+    <p class="text-xs md:text-sm text-white/80">Design by <a href="https://github.com/nauvalazhar" class="hover:text-white hover:underline" target="_blank">Nauval</a></p>
+    <p class="text-xs md:text-sm text-white/80">Develop by <a href="https://github.com/hudadamar21" class="hover:text-white hover:underline" target="_blank">Huda Damar</a></p>
   </div>
 </footer>
