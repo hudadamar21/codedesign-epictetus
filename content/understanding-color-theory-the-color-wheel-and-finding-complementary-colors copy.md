@@ -1,20 +1,20 @@
 ---
 date: 2022-02-20T10:57:42+07:00
 
-title: "Understanding color theory: the color wheel and finding complementary colors"
-thumbnail: "/images/img1.jpeg"
-description: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. "
-category: "UI Design"
+title: 'Understanding color theory: the color wheel and finding complementary colors'
+thumbnail: '/images/img1.jpeg'
+description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. '
+category: 'UI Design'
 
-author: "Leslie Alexander"
-author_photo: "/images/photo4.png"
-author_job: "UI Designer"
+author: 'Leslie Alexander'
+author_photo: '/images/photo4.png'
+author_job: 'UI Designer'
 
 tags: [ui/ux, colors]
-keyword: "ui/ux, colors"
+keyword: 'ui/ux, colors'
 draft: false
 toc: false
-trending: false
+
 ---
 
 ### Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
