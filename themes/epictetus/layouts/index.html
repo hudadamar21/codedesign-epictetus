@@ -4,7 +4,7 @@
 
   <section class="post-container md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-5 divide-y divide-white/10">
     {{ range $index, $value :=  $paginate.Pages }}
-    {{ if (eq $index 0) }}
+    {{ if and (eq $index 0) (eq $paginate.PageNumber 1) }}
       {{- partial "components/big-card-article.html" . -}}
       {{ else }}
       {{- partial "components/card-article.html" . -}}
