@@ -67,7 +67,7 @@
               x-cloak
               x-transition.opacity
               @click.outside="open = false"
-              class="lg:absolute top-full mt-1 left-0 bg-secondary/30 lg:py-0 text-center lg:text-left lg:bg-white lg:rounded-lg text-white lg:text-black min-h-32"
+              class="lg:absolute top-full mt-0 lg:-mt-2 left-0 bg-secondary/30 lg:py-0 text-center lg:text-left lg:bg-white lg:rounded-lg text-white lg:text-black min-h-32"
             >
               {{ range $term, $value := $taxonomy }} 
                 {{ $countIndex = add $countIndex 1 }} 
