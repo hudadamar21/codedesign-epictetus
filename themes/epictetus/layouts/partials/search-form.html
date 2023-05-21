@@ -3,15 +3,20 @@
   id="search"
   action='{{ with .GetPage "/search" }}{{.Permalink}}{{end}}'
   method="get"
-  class="absolute top-0 inset-x-0 md:static w-[90%] md:w-80 mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark/60 text-white transition duration-500 md:translate-y-0"
-  :class="openSearch ? 'translate-y-24' : '-translate-y-[150%]'"
-  >
+  x-show="openSearch"
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="-translate-y-[150%]"
+  x-transition:enter-end="translate-y-0"
+  x-transition:leave="transition ease-in duration-300"
+  x-transition:leave-start="translate-y-0"
+  x-transition:leave-end="-translate-y-[150%]"
+  class="absolute top-24 inset-x-0 md:static w-[90%] md:w-80 mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark/60 text-white md:translate-y-0 md:!flex">
   <svg class="w-4 h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.1" clip-path="url(#clip0_5_30)">
       <path
         d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z"
         stroke="white"
-        stroke-width="2"
+        stroke-width="2"  
         stroke-linecap="round"
         stroke-linejoin="round" />
       <path

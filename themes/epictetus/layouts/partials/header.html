@@ -5,14 +5,14 @@
     <div
       class="flex items-center justify-between w-full gap-3 pt-0 md:pt-10 h-12 md:h-20 mb-5 gap-x-5 md:gap-x-12 px-5">
       <nav class="flex items-center w-full justify-between md:justify-start md:gap-x-20">
-        <button @click="openMenu = !openMenu" class="relative z-10 md:hidden">
+        <button @click="openMenu = !openMenu; openSearch = false" class="relative z-10 md:hidden">
           <img src="/menu.svg" alt="menu" />
         </button>
         <a href="/" class="relative z-10 flex items-center gap-x-3">
           <img src="/logo.svg" alt="epictetus logo" />
           Epictetus
         </a>
-        <button @click="openSearch = !openSearch" class="relative z-10 md:hidden">
+        <button @click="openSearch = !openSearch; openMenu = false" class="relative z-10 md:hidden">
           <svg class="w-5 h-5" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.1" clip-path="url(#clip0_5_30)">
               <path
@@ -36,8 +36,9 @@
           </svg>
         </button>
         <div
-          class="absolute md:static top-0 left-0 flex flex-col md:flex-row items-center justify-center gap-x-10 pt-28 pb-10 md:p-0 bg-primary md:bg-transparent w-full md:w-auto transition duration-500 md:translate-y-0"
-          :class="openMenu ? 'translate-y-0' : '-translate-y-full'">
+          @click.outside="openMenu = false"
+          
+          class="absolute md:static top-0 left-0 flex flex-col md:flex-row items-center justify-center gap-x-10 pt-28 pb-10 md:p-0 bg-primary md:bg-transparent w-full md:w-auto md:translate-y-0 md:!flex">
           {{ range .Site.Params.Categories }}
           <a
             href='/{{ if eq . "tags" }}{{ . }}{{ else }}category/{{.slug}}{{ end }}'
