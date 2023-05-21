@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="scroll-smooth scroll-pt-20"><head>
+	<meta name="generator" content="Hugo 0.101.0" />
+  <title>Epictetus</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="_2tFiWMi2coD9-msB3YML4WoCaoJDDgr1AQfm-k90dE" />
+
+  <link rel="icon" type="image/x-icon" href="/logo.svg" />
+  <link rel="canonical" href="https://epictetus-hd21.netlify.app/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Epictetus" />
+  
+  <meta name="og:description" content="Epictetus description" />
+   
+  <meta name="keywords" content="blog" />
+  
+  <meta property="og:url" content="https://epictetus-hd21.netlify.app/" />
+  <meta property="og:site_name" content="Epictetus" />
+  <meta name="twitter:card" content="summary" />
+  
+  <meta property="og:image" content="/images/og_thumbnail.png" />
+  
+  <meta property="og:image:width" content="945" />
+  <meta property="og:image:height" content="595" />
+
+  
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+  
+
+  
+</head>
+</head>
+
+<body class="bg-gradient-to-b from-primary to-secondary mx-auto overflow-x-hidden text-white min-h-screen"><header
+  x-data="{openMenu: false, openSearch: false}"
+  class="relative w-full items-start justify-center z-40 select-none pt-5">
+  <div class="max-w-screen-xl mx-auto col-span-2 order-last lg:order-none mt-3 lg:mt-0">
+    <div
+      class="flex items-center justify-between w-full gap-3 pt-0 lg:pt-10 h-12 lg:h-20 mb-5 gap-x-5 lg:gap-x-12 px-5">
+      <nav class="flex items-center w-full justify-between lg:justify-start lg:gap-x-20">
+        <button @click="openMenu = !openMenu; openSearch = false" class="relative z-10 lg:hidden">
+          <img src="/menu.svg" alt="menu" />
+        </button>
+        <a href="/" class="relative z-10 flex items-center gap-x-3">
+          <img src="/logo.svg" alt="epictetus logo" />
+          Epictetus
+        </a>
+        <button @click="openSearch = !openSearch; openMenu = false" class="relative z-10 lg:hidden">
+          <svg class="w-5 h-5" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.1" clip-path="url(#clip0_5_30)">
+              <path
+                d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12.25 12.25L9.71251 9.71246"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_5_30">
+                <rect width="14" height="14" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+        <div
+          @click.outside="openMenu = false"
+          x-show="openMenu"
+          x-cloak
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="-translate-y-[150%]"
+          x-transition:enter-end="translte-y-0"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="translate-y-0"
+          x-transition:leave-end="-translate-y-[150%]"
+          class="absolute lg:static top-0 left-0 flex flex-col lg:flex-row items-center justify-center gap-x-10 pt-28 pb-10 lg:p-0 bg-primary lg:bg-transparent w-full lg:w-auto lg:translate-y-0 lg:!flex">
+          
+          <a
+            href='/category/ui-design'
+            class="swiper-slide flex items-center justify-center gap-3 w-full lg:w-auto hover:bg-white/5 dark:hover:bg-primary-dark-gray py-5 lg:py-3 px-2 lg:px-5 lg:rounded-lg transition">
+            UI Design
+          </a>
+          
+          <a
+            href='/category/front-end'
+            class="swiper-slide flex items-center justify-center gap-3 w-full lg:w-auto hover:bg-white/5 dark:hover:bg-primary-dark-gray py-5 lg:py-3 px-2 lg:px-5 lg:rounded-lg transition">
+            Front-end
+          </a>
+          
+          <a
+            href='/category/back-end'
+            class="swiper-slide flex items-center justify-center gap-3 w-full lg:w-auto hover:bg-white/5 dark:hover:bg-primary-dark-gray py-5 lg:py-3 px-2 lg:px-5 lg:rounded-lg transition">
+            Back-end
+          </a>
+          
+        </div>
+      </nav>
+<form
+  id="search"
+  action='https://epictetus-hd21.netlify.app/search/'
+  method="get"
+  x-show="openSearch"
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="-translate-y-[150%]"
+  x-transition:enter-end="translate-y-0"
+  x-transition:leave="transition ease-in duration-300"
+  x-transition:leave-start="translate-y-0"
+  x-transition:leave-end="-translate-y-[150%]"
+  class="absolute top-24 inset-x-0 lg:static w-[90%] lg:w-80 mx-auto flex items-center gap-3 rounded-full focus:outline-none px-6 py-2.5 bg-dark/60 text-white lg:translate-y-0 lg:!flex">
+  <svg class="w-4 h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.1" clip-path="url(#clip0_5_30)">
+      <path
+        d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+      <path
+        d="M12.25 12.25L9.71251 9.71246"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+    </g>
+    <defs>
+      <clipPath id="clip0_5_30">
+        <rect width="14" height="14" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+  <input
+    id="search-input"
+    name="query"
+    class="search-content bg-transparent focus:outline-none tracking-wider"
+    type="text"
+    placeholder="Search" />
+</form>
+</div>
+  </div>
+</header>
+<section class="max-w-screen-xl mx-auto px-0 md:px-0 py-6">
+
+<main class="space-y-0 md:space-y-4 mb-12 lg:mb-0">
+
+  <section class="post-container md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-5 divide-y divide-white/10">
+    
+    <figure class="post-card mt-3 md:mt-0 pt-8 md:pt-0">
+  <a href="https://epictetus-hd21.netlify.app/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy-2/" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
+    
+    <img src="/images/img1.jpeg"  class="w-full h-full object-cover rounded-lg" alt="Understanding color theory: the color wheel and finding complementary colors">
+    
+  </a><div class="md:col-span-4 py-5">
+  <div class="text-sm opacity-60 flex items-center gap-x-3">
+    <span class="uppercase">UI Design</span> <div class="h-1 w-1 rounded-full bg-white"></div> 20 Jan 2022
+  </div>
+  <a href="https://epictetus-hd21.netlify.app/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy-2/" class="block hover:underline py-3">
+    <figcaption class="font-medium leading-loose line-clamp-2 capitalize text-2xl">
+      Understanding color theory: the color wheel and finding complementary colors
+    </figcaption>
+  </a>
+  <p class="opacity-60 leading-loose tracking-wider w-full md:w-[85%] line-clamp-3">
+    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. 
+  </p>
+  <div class="flex items-center gap-3 mt-5">
+    <img src="/images/photo4.png" class="w-14 h-14 aspect-square rounded-full object-cover" alt="Leslie Alexander">
+    <div>
+      <h3>Leslie Alexander</h3>
+      <p class="opacity-60">UI Designer</p>
+    </div>
+  </div>
+</div></figure>
+
+
+  
+    <figure class="post-card mt-3 md:mt-0 pt-8 md:pt-0">
+  <a href="https://epictetus-hd21.netlify.app/the-more-important-the-work-the-more-important-the-rest-copy/" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
+    
+    <img src="/images/img2.jpeg"  class="w-full h-full object-cover rounded-lg" alt="The More Important the Work, the More Important the Rest">
+    
+  </a><div class="md:col-span-4 py-5">
+  <div class="text-sm opacity-60 flex items-center gap-x-3">
+    <span class="uppercase">9 to 5</span> <div class="h-1 w-1 rounded-full bg-white"></div> 20 Oct 2021
+  </div>
+  <a href="https://epictetus-hd21.netlify.app/the-more-important-the-work-the-more-important-the-rest-copy/" class="block hover:underline py-3">
+    <figcaption class="font-medium leading-loose line-clamp-2 capitalize text-2xl">
+      The More Important the Work, the More Important the Rest
+    </figcaption>
+  </a>
+  <p class="opacity-60 leading-loose tracking-wider w-full md:w-[85%] line-clamp-3">
+    Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.
+  </p>
+  <div class="flex items-center gap-3 mt-5">
+    <img src="/images/photo2.png" class="w-14 h-14 aspect-square rounded-full object-cover" alt="Esther Howard">
+    <div>
+      <h3>Esther Howard</h3>
+      <p class="opacity-60">Entrepreneur</p>
+    </div>
+  </div>
+</div></figure>
+
+
+  
+    <figure class="post-card mt-3 md:mt-0 pt-8 md:pt-0">
+  <a href="https://epictetus-hd21.netlify.app/email-love-email-inspiration-templates-and-discovery/" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
+    
+    <img src="/images/img4.jpeg"  class="w-full h-full object-cover rounded-lg" alt="Email Love - Email Inspiration, Templates and Discovery">
+    
+  </a><div class="md:col-span-4 py-5">
+  <div class="text-sm opacity-60 flex items-center gap-x-3">
+    <span class="uppercase">Inspiration</span> <div class="h-1 w-1 rounded-full bg-white"></div> 20 Feb 2021
+  </div>
+  <a href="https://epictetus-hd21.netlify.app/email-love-email-inspiration-templates-and-discovery/" class="block hover:underline py-3">
+    <figcaption class="font-medium leading-loose line-clamp-2 capitalize text-2xl">
+      Email Love - Email Inspiration, Templates and Discovery
+    </figcaption>
+  </a>
+  <p class="opacity-60 leading-loose tracking-wider w-full md:w-[85%] line-clamp-3">
+    Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.
+  </p>
+  <div class="flex items-center gap-3 mt-5">
+    <img src="/images/photo3.png" class="w-14 h-14 aspect-square rounded-full object-cover" alt="Robert Fox">
+    <div>
+      <h3>Robert Fox</h3>
+      <p class="opacity-60">Front-end Engineer</p>
+    </div>
+  </div>
+</div></figure>
+
+
+  
+  </section>
+
+  <div class="pt-16 flex justify-center w-full"></div>
+</main>
+
+  </section><footer x-data="{datenow: new Date()}" class="mt-12 pb-28 text-primary-gray px-5 xl:px-0">
+  <div class="max-w-screen-xl mx-auto text-center pt-10 space-y-2">
+    <p class="text-xs md:text-sm">
+      Copyright (c) 2021 - <span x-text="datenow.getFullYear()"></span> - Epictetus
+    </p>
+    <p class="text-xs md:text-sm text-white/80">Design by <a href="https://github.com/nauvalazhar" class="hover:text-white hover:underline" target="_blank">Nauval</a></p>
+    <p class="text-xs md:text-sm text-white/80">Develop by <a href="https://github.com/hudadamar21" class="hover:text-white hover:underline" target="_blank">Huda Damar</a></p>
+  </div>
+</footer>
+<script>
+  window.store = {
+      
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors\/": {
+          
+          "title": "Understanding color theory: the color wheel and finding complementary colors",
+          "thumbnail": "\/images\/img1.jpeg",
+          "category": "UI Design",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors\/",
+          "date": "20 Nov 2022",
+          "description": "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+          "author": "Leslie Alexander",
+          "author_photo": "\/images\/photo4.png",
+          "author_job": "UI Designer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/the-more-important-the-work-the-more-important-the-rest\/": {
+          
+          "title": "The More Important the Work, the More Important the Rest",
+          "thumbnail": "\/images\/img2.jpeg",
+          "category": "9 to 5",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/the-more-important-the-work-the-more-important-the-rest\/",
+          "date": "20 Sep 2022",
+          "description": "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.",
+          "author": "Esther Howard",
+          "author_photo": "\/images\/photo2.png",
+          "author_job": "Entrepreneur",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/how-to-design-a-product-that-can-grow-itself-10x-in-year\/": {
+          
+          "title": "How to design a product that can grow itself 10x in year",
+          "thumbnail": "\/images\/img3.jpeg",
+          "category": "Internet",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/how-to-design-a-product-that-can-grow-itself-10x-in-year\/",
+          "date": "20 Jun 2022",
+          "description": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+          "author": "Jenny Wilson",
+          "author_photo": "\/images\/photo1.png",
+          "author_job": "Product Designer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery-copy\/": {
+          
+          "title": "Email Love - Email Inspiration, Templates and Discovery",
+          "thumbnail": "\/images\/img4.jpeg",
+          "category": "Inspiration",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery-copy\/",
+          "date": "20 Apr 2022",
+          "description": "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.",
+          "author": "Robert Fox",
+          "author_photo": "\/images\/photo3.png",
+          "author_job": "Front-end Engineer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery-copy-2\/": {
+          
+          "title": "Email Love - Email Inspiration, Templates and Discovery",
+          "thumbnail": "\/images\/img4.jpeg",
+          "category": "Inspiration",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery-copy-2\/",
+          "date": "20 Feb 2022",
+          "description": "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.",
+          "author": "Robert Fox",
+          "author_photo": "\/images\/photo3.png",
+          "author_job": "Front-end Engineer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy\/": {
+          
+          "title": "Understanding color theory: the color wheel and finding complementary colors",
+          "thumbnail": "\/images\/img1.jpeg",
+          "category": "UI Design",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy\/",
+          "date": "20 Feb 2022",
+          "description": "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+          "author": "Leslie Alexander",
+          "author_photo": "\/images\/photo4.png",
+          "author_job": "UI Designer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/how-to-design-a-product-that-can-grow-itself-10x-in-year-copy\/": {
+          
+          "title": "How to design a product that can grow itself 10x in year",
+          "thumbnail": "\/images\/img3.jpeg",
+          "category": "Internet",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/how-to-design-a-product-that-can-grow-itself-10x-in-year-copy\/",
+          "date": "20 Jan 2022",
+          "description": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+          "author": "Jenny Wilson",
+          "author_photo": "\/images\/photo1.png",
+          "author_job": "Product Designer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy-2\/": {
+          
+          "title": "Understanding color theory: the color wheel and finding complementary colors",
+          "thumbnail": "\/images\/img1.jpeg",
+          "category": "UI Design",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/understanding-color-theory-the-color-wheel-and-finding-complementary-colors-copy-2\/",
+          "date": "20 Jan 2022",
+          "description": "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+          "author": "Leslie Alexander",
+          "author_photo": "\/images\/photo4.png",
+          "author_job": "UI Designer",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/the-more-important-the-work-the-more-important-the-rest-copy\/": {
+          
+          "title": "The More Important the Work, the More Important the Rest",
+          "thumbnail": "\/images\/img2.jpeg",
+          "category": "9 to 5",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/the-more-important-the-work-the-more-important-the-rest-copy\/",
+          "date": "20 Oct 2021",
+          "description": "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.",
+          "author": "Esther Howard",
+          "author_photo": "\/images\/photo2.png",
+          "author_job": "Entrepreneur",
+      },
+      
+      
+      
+      "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery\/": {
+          
+          "title": "Email Love - Email Inspiration, Templates and Discovery",
+          "thumbnail": "\/images\/img4.jpeg",
+          "category": "Inspiration",
+          "url": "https:\/\/epictetus-hd21.netlify.app\/email-love-email-inspiration-templates-and-discovery\/",
+          "date": "20 Feb 2021",
+          "description": "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.",
+          "author": "Robert Fox",
+          "author_photo": "\/images\/photo3.png",
+          "author_job": "Front-end Engineer",
+      },
+      
+  }
+</script>
+<script src="/js/lunr.js"></script>
+<script src="/js/search.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script>
+
+  const postContainer = document.querySelector('.post-container');
+
+  const options = {
+    path: '.post-load-more',
+    append: '.post-card',
+    loadOnScroll: false,
+    button: '.post-load-more',
+    history: null
+  };
+
+  const infScroll = new InfiniteScroll(postContainer, options);
+</script>
+
+</body>
+</html>
