@@ -1,9 +1,15 @@
-<figure class="post-card col-span-3 grid grid-cols-1 md:grid-cols-12 gap-10">
+<figure class="post-card col-span-3 grid grid-cols-1 md:grid-cols-12 gap-8">
   <a href="{{.Permalink}}" class="md:col-span-8 block w-full rounded-md hover:opacity-90 transition aspect-video">
     {{ if .Params.Thumbnail }}
     <img src="{{ .Params.Thumbnail }}"  class="w-full h-full object-cover rounded-lg" alt="{{ .Title }}">
     {{ end }}
   </a>
-  {{- partial "components/card-article-body.html" . -}}
+  {{- partial "components/card-article-body.html" (dict 
+    "type" "big" 
+    "title" .Title
+    "params" .Params
+    "url" .Permalink
+    "site" .Site
+   )}}
 </figure>
 
