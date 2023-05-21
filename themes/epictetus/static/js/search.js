@@ -61,7 +61,7 @@ function displayResults (results, store) {
     for (const n in results) {
       const item = store[results[n].ref]
       resultList += `
-        <figure class="post-card mt-3 md:mt-0 pt-8 md:pt-0">
+        <figure class="post-card mt-3 md:mt-0 pt-6 pb-4 md:pt-0">
           <a href="${item.url}" class="block w-full rounded-md hover:opacity-90 transition aspect-video">
             <img src="${item.thumbnail}"  class="w-full h-full object-cover rounded-lg" alt="{{ .Title }}">
           </a>

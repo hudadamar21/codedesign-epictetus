@@ -2,7 +2,7 @@
 {{ $paginate := .Paginate (where .Site.RegularPages "Kind" "page" )}}
 <main class="space-y-0 md:space-y-4 mb-12 lg:mb-0">
 
-  <section class="post-container md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-14 px-5 divide-y divide-white/10">
+  <section class="post-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-14 px-5 divide-y divide-white/10">
     {{ range $index, $value :=  $paginate.Pages }}
     {{ if and (eq $index 0) (eq $paginate.PageNumber 1) }}
       {{- partial "components/big-card-article.html" . -}}
