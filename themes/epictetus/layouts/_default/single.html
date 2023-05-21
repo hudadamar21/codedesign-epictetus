@@ -44,8 +44,7 @@
         prose-headings:tracking-wider
         p-0 md:p-10 
         leading-loose 
-        [&>*]:text-white/80 
-        [&>*]:tracking-wider 
+        [&>*]:text-white/80
       ">
       {{.Content}}
     </div>
@@ -53,6 +52,10 @@
 </main>
 
 <!-- Jika content memiliki pre atau bisa dibilang mempunyai block code maka masukan script -->
-{{end}} {{ define "scripts"}} {{ if (findRE "<pre" .Content 1) }}
-<script src="/js/copy-code-button.js"></script>
-{{ end }} {{ end }}
+{{end}} 
+
+{{ define "scripts"}} 
+  {{ if (findRE "<pre" .Content 1) }}
+  <script src="/js/copy-code-button.js"></script>
+  {{ end }} 
+{{ end }}
